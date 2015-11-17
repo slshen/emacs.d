@@ -1,3 +1,5 @@
+# copied from https://github.com/flyingmachine/emacs.d/
+
 # this is a Clojure-friendly emacs config
 
 If you're new to emacs, check out
