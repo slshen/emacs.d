@@ -66,7 +66,12 @@
     tagedit
 
     ;; git integration
-    magit))
+    magit
+
+    ;; go
+    go-mode
+
+    ))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -129,8 +134,9 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 
-(autoload 'markdown-mode "markdown-mode"
-   "Major mode for editing Markdown files" t)
+(require 'markdown-mode)
+;;(autoload 'markdown-mode "markdown-mode"
+;;   "Major mode for editing Markdown files" t)
 ;;(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
