@@ -1,3 +1,4 @@
+local.el
 elpa
 *.elc
 session.*
