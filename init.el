@@ -60,7 +60,8 @@
     projectile
 
     ;; colorful parenthesis matching
-    rainbow-delimiters
+    ;;rainbow-delimiters
+    rainbow-mode
 
     ;; edit html tags like sexps
     tagedit
@@ -84,10 +85,13 @@
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
 
+(if (eq system-type 'windows-nt)
+    (progn
+     (set-face-font 'default "Hack-11")))
+
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
-
 
 ;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
 ;; to load them.
