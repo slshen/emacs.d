@@ -3,7 +3,7 @@ elpa
 *.elc
 session.*
 .smex-items
-*~$
+*~
 places
 .recentf
 ido.last
@@ -12,3 +12,4 @@ projectile-bookmarks.eld
 projectile.cache
 auto-save-list
 backups
+network-security.data
