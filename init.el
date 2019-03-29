@@ -83,6 +83,10 @@ There are two things you can do about this warning:
     ;; go
     go-mode
 
+    ;; hashicorp (terraform)
+    hcl-mode
+    terraform-mode
+
     ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -98,7 +102,9 @@ There are two things you can do about this warning:
 
 (if (eq system-type 'windows-nt)
     (progn
-     (set-face-font 'default "Hack-11")))
+     (set-face-font 'default "Hack-11")
+     (prefer-coding-system 'utf-8-unix)
+     ))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -166,8 +172,7 @@ There are two things you can do about this warning:
  '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (go-mode tagedit rainbow-mode smex projectile ido-ubiquitous 
-	     clojure-mode-extra-font-locking cider))))
+    (go-mode tagedit rainbow-mode smex projectile ido-ubiquitous clojure-mode-extra-font-locking cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
