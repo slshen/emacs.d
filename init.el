@@ -86,6 +86,8 @@ There are two things you can do about this warning:
     ;; hashicorp (terraform)
     hcl-mode
     terraform-mode
+    ;;
+    groovy-mode
 
     ))
 
@@ -104,7 +106,8 @@ There are two things you can do about this warning:
     (progn
      (set-face-font 'default "Hack-11")
      (prefer-coding-system 'utf-8-unix)
-     ))
+     (setq exec-path (cons "c:/opt/emax64/bin64" exec-path))
+     (set-face-font 'default "Hack-11")))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -161,6 +164,8 @@ There are two things you can do about this warning:
 ;;(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
+(add-to-list 'auto-mode-alist '("build\\.gradle\\'" . groovy-mode))
+
 
 ;;(load "local.el")
 
